@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+
+        var i = 1;
+        var vetNumero = [];
+        var vetNumeroPos = [];
+        var numero = 0;
+
+        function numPos() {
+            vetNumeroPos.push(numero);
+        }
+
+        function reNumeros() {
+            while (i <= 10) {
+                numero = parseFloat(prompt("Digite o " + i + "° número:"));
+                if (isNaN(numero)) {
+                    alert("Número inválido!");
+                } else {
+                    vetNumero.push(numero);
+                    if (numero >= 0) {
+                        numPos();
+                    } else { }
+                    i++;
+                }
+            }
+        }
+
+        reNumeros();
+        document.write("Todos os números digitados: " + vetNumero + "</br>");
+        document.write("Números positivos digitados: " + vetNumeroPos);
+        
+    </script>
+</head>
+
+</html>

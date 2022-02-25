@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        function organizarArray() {
+            return(array.sort((a,b) => a -b));
+                
+            }
+
+        var tamArray = parseFloat(prompt("Digite o tamanho do array que você quer criar:"));
+        i = 1;
+        var array = [];
+
+
+        while (i <= tamArray) {
+            var numero = parseFloat(prompt("Digite o " + i + "° número."));
+            if (isNaN(numero)) {
+                alert("Valor inválido");
+            } else {
+                array.push(numero);
+                i++;
+            }
+        }
+
+        document.write("Array desorganizado: " + array + ".</br>")
+        document.write("Array organizado: " + organizarArray() + ".</br>")
+
+    </script>
+</head>
+
+</html>

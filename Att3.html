@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        var i = 1;
+        var vetNum = [];
+        var vetPar = [];
+        var vetImpar = [];
+
+        function restoNum(numero) {
+            return (numero % 2);
+        }
+
+        function classNum(funcao, numero) {
+            if (funcao == 0) {
+                vetPar.push(numero);
+            } else {
+                vetImpar.push(numero);
+            }
+        }
+
+        while (i <= 10) {
+            var numero = parseFloat(prompt("Digite o " + i + "° número:"));
+            if (isNaN(numero)) {
+                alert("Número inválido!");
+            } else {
+                vetNum.push(numero);
+                restoNum(numero);
+                classNum(restoNum(numero), numero);
+                i++;
+            }
+        }
+        document.write("Todos os números: " + vetNum + ". </br>")
+        document.write("Números pares: " + vetPar + ". </br>");
+        document.write("Números ímpares: " + vetImpar + ". </br>");
+    </script>
+
+</head>
+
+</html>
